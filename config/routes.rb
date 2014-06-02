@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   devise_for :users, controllers: { registrations: 'registrations', omniauth_callbacks: :omniauth_callbacks }
 
-  resources :posts, except: [:show, :edit, :update, :destroy]
+  resources :posts, except: :destroy
   resources :users, only: :show
 
   # The priority is based upon order of creation: first created -> highest priority.

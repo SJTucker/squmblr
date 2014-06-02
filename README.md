@@ -7,28 +7,33 @@ Meme Blogging / Nerd Tumblr
 First PR Features:
 =========
  1. Captcha [Steven + Sam]
- 2. Welcome emails [Jeremy + Max + Mitch]
- 3. Oauth w/ Github [Nat + Adam]
- 4. Password Reset (incl. emails) [Robert + Peder]
- 5. Username signin [Drew + Randy]
- 6. Account edit [Giovanni + James]
- 7. Gravatar / User profile page [Matt + Matt]
+ 2. ✓ Welcome emails [Jeremy + Max + Mitch]
+ 3. ✓ Oauth w/ Github [Nat + Adam]
+ 4. ✓ Password Reset (incl. emails) [Robert + Peder]
+ 5. ✓ Username signin [Drew + Randy]
+ 6. ✓ Account edit [Giovanni + James]
+ 7. ✓ Gravatar / User profile page [Matt + Matt]
  8. Start stylin' [Sam W. + Spencer]
- 9. Post index page [Aimee + Tyler]
+ 9. ✓ Post index page [Aimee + Tyler]
 
+✓
 
 Second PR Features:
 ==========
- 1. Image uploads with carrierwave [Tyler + Aimee]
+ 1. ✓ Image uploads with carrierwave [Tyler + Aimee]
  2. Individual squmblogs (w/ following) [Max + Mitch + Jeremy]
- 3. Up/Down/Meh voting!! (w/ rjs and poltergeist) [Peder + Robert]
- 4. Social Sharing + pretty urls on user pages [Matt + Matt]
+ 3. x Up/Down/Meh voting!! (w/ rjs and poltergeist) [Peder + Robert]
+ 4. ✓ Social Sharing + pretty urls on user pages [Matt + Matt]
  5. Mailer Layouts / Pretty Emails (take a look at mailview gem) [James + Giovanni]
- 6. Meme APIs!! [Randy + Drew]
+ 6. x Meme APIs!! [Randy + Drew]
  7. Comments [Spencer + Sam W.]
  8. Draft Posts (w/ ability to edit before publishing) [Nat + Adam]
  9. Admin Panel (active\_admin, selectively enable features) [Sam T. + Steven]
 
+Matt
+Matt
+Tyler
+Aimee
 
 Third PR Features:
 ==================
@@ -80,25 +85,27 @@ Maybe?
   * Spamming / Invitations
 
 
-## Project Documentation
+## Project Setup
 
-* Ruby version
-
-* System dependencies
-
+* Ruby Version: 2.1.1
+* System Dependencies: phantomjs, imagemagick
 * Configuration
+    1. *Copy* config/database.yml.example to config/database.yml
+    2. Change any database settings in config/database.yml (*NOT* the example file) that are necessary for your machine.
 
 * Database creation
-
+    1. `rake db:create:all`
+    2. `rake db:migrate`
 * Database initialization
-
+    1. `rake db:seed`
 * How to run the test suite
-
+    1. `rake`
 * Services (job queues, cache servers, search engines, etc.)
-
+    * N/A
 * Deployment instructions
-
-* ...
+    * `heroku create <application_name>`
+    * `git push heroku master`
+    * `heroku run rake db:migrate`
 
 ## Setup Instructions
 
